@@ -1,0 +1,7 @@
+type Pet @model {
+  id: ID!
+  name: String!
+  img_url: String!
+  rarity: String!
+  count: Int!
+}
