@@ -123,7 +123,7 @@ export default {
         this.total_pets = this.total_pets + this.pets[i].count;
       }
       // this.pets.sort((a, b) => a.rarity.localeCompare(b.rarity));
-      this.pets.sort((a, b) => parseFloat(b.count) - parseFloat(a.count));
+      this.pets.sort((a, b) => parseFloat(a.count) - parseFloat(b.count));
     },
     subscribe() {
       API.graphql({ query: onUpdatePet })
