@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Adopt Me Fossil Egg Admin</h1>
+    <h4>Admin</h4>
     <input type="text" v-model="name" placeholder="Pet name">
     <input type="text" v-model="img_url" placeholder="Pet image url">
     <input type="text" v-model="rarity" placeholder="Rarity">
