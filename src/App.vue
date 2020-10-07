@@ -43,7 +43,7 @@
                 <tr v-for="item in pets" :key="item.id">
                   <td class="align-middle"><h3><b>{{ item.count }}</b></h3></td>
                   <td class="align-middle"><h4>{{ item.name }}</h4></td>
-                  <td class="align-middle"><img :src="item.img_url" alt="" /></td>
+                  <td class="align-middle"><img :src="item.img_url" :alt="item.name" /></td>
                   <td class="align-middle"><h4>{{ item.rarity }}</h4></td>
                 </tr>
               </tbody>
@@ -182,6 +182,10 @@ export default {
 
 body {
   font-family: poplar-std, sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 header {
