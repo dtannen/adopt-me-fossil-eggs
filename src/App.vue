@@ -15,11 +15,14 @@
     </div> -->
     <header>
       <div class="container text-center">
-      <h1>Elle's Adopt Me Fossil Egg Hunt</h1>
-      <a href="https://www.youtube.com/channel/UCcg4Vr0rCm7tW4zoJfPqS-Q" target="_blank">
-        <button type="button" class="btn btn-danger"><i class="fab fa-youtube"></i> YouTube</button>
-      </a>
-    </div>
+        <img src="https://adopt-me-fossil-egg-pets.s3.amazonaws.com/adopt-me-banner.png" />
+      </div>
+      <br />
+      <div class="container text-center">
+        <a href="https://www.youtube.com/channel/UCcg4Vr0rCm7tW4zoJfPqS-Q" target="_blank">
+          <button type="button" class="btn btn-danger"><i class="fab fa-youtube"></i> YouTube</button>
+        </a>
+      </div>
   </header>
     <main>
       <div class="container">
