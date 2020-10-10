@@ -11,7 +11,7 @@
           <div v-for="item in pets" :key="item.id">
             <div class="divTableRow">
             <div class="divTableCell">{{ item.name }} </div>
-            <button v-on:click="updatePet(item.id, item.count)">Add</button>
+            <button v-on:click="updatePet(item.id)">Add</button>
             </div>
           </div>
       </div>
@@ -58,8 +58,13 @@ export default {
       });
       this.pets = pets.data.listPets.items;
     },
-    async updatePet(id, count) {
-      count = count + 1;
+    async updatePet(id) {
+      for (var i in this.pets) {
+        if (this.pets[i].id == id) {
+          this.pets[i].count = this.pets[i].count + 1;
+        }
+      }
+      count = this.pets[i].count;
       const pet = { id, count };
       await API.graphql({
         query: updatePet,
