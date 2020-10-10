@@ -35,7 +35,8 @@ export default {
       img_url: '',
       rarity: '',
       count: '',
-      pets: []
+      pets: [],
+      petcounts: []
     }
   },
   methods: {
@@ -61,15 +62,18 @@ export default {
     async updatePet(id) {
       for (var i in this.pets) {
         if (this.pets[i].id == id) {
-          this.pets[i].count = this.pets[i].count + 1;
+          this.pets[i].count += 1;
+          this.petcounts[this.pets[i].name] = this.pets[i].count;
+          console.log(this.petcounts[this.pets[i].name]);
+          var count = this.petcounts[this.pets[i].name];
+          const pet = { id, count };
+          await API.graphql({
+            query: updatePet,
+            variables: {input: pet},
+          });
+          break;
         }
       }
-      count = this.pets[i].count;
-      const pet = { id, count };
-      await API.graphql({
-        query: updatePet,
-        variables: {input: pet},
-      });
     }
   }
 };
